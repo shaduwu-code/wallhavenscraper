@@ -2,6 +2,7 @@
 # ------------------------------------------------------------------------------
 # ---------------------------------------------------- Import required modules
 # Import requests module to make get request
+import re
 import requests
 # Import BeautifulSoup to parse the HTML
 from bs4 import BeautifulSoup as bs
@@ -34,6 +35,8 @@ search = ' '.join(parser.parse_args().search)
 purity = parser.parse_args().purity
 # Assign the order argument to order
 order = parser.parse_args().order
+# Import exit 
+from sys import exit
 
 # Iniate load_dotenv to load environment variables
 load_dotenv()
@@ -109,12 +112,12 @@ try:
     # Initiate the scraper
     wallhaven = wallhaven(search, purity, order)
     # Get the wallpapers
-    wallpapers = wallhaven.get_wallpapers(wallhaven.search)
+    wallpapers = wallhaven.get_wallpapers(search)
     # Download the wallpapers
-    wallhaven.download_wallpapers(wallpapers, wallhaven.search)
+    wallhaven.download_wallpapers(wallpapers, search)
 except(KeyboardInterrupt):
     print("\nExiting...")
     exit()
-except(Exception):
-    print("\nError occured")
-    exit()
+#except(Exception):
+#    print("\nError occured")
+#    exit()
