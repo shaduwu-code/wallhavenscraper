@@ -1,9 +1,9 @@
 # A scraper for wallhaven.cc that downloads wallpapers
 # ------------------------------------------------------------------------------
 # ---------------------------------------------------- Import required modules
-# Import requests module to make get request
+# Import exit to exit the program
 from sys import exit
-import re
+# Import requests module to make get request
 import requests
 # Import BeautifulSoup to parse the HTML
 from bs4 import BeautifulSoup as bs
