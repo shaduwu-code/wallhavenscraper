@@ -118,6 +118,6 @@ try:
 except(KeyboardInterrupt):
     print("\nExiting...")
     exit()
-#except(Exception):
-#    print("\nError occured")
-#    exit()
+except(Exception):
+    print("\nError occured")
+    exit()
