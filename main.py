@@ -2,6 +2,7 @@
 # ------------------------------------------------------------------------------
 # ---------------------------------------------------- Import required modules
 # Import requests module to make get request
+from sys import exit
 import re
 import requests
 # Import BeautifulSoup to parse the HTML
@@ -35,8 +36,7 @@ search = ' '.join(parser.parse_args().search)
 purity = parser.parse_args().purity
 # Assign the order argument to order
 order = parser.parse_args().order
-# Import exit 
-from sys import exit
+# Import exit
 
 # Iniate load_dotenv to load environment variables
 load_dotenv()
