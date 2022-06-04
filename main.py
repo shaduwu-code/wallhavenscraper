@@ -38,7 +38,7 @@ purity = parser.parse_args().purity
 order = parser.parse_args().order
 # Import exit
 
-# Iniate load_dotenv to load environment variables
+# Initiate load_dotenv to load environment variables
 load_dotenv()
 
 
